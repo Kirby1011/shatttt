@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0" />
+    <link rel="stylesheet" href="yes.css">
+    <title>wala nay bawian!</title>
+</head>
+<body>
+    <div class="kilig">
+        <img src="https://media1.tenor.com/m/WU1hT76rBZ4AAAAC/bad-bunny.gif" alt="">
+        <p class="ay">hehehehe wala nay bawian </p>
+        <p class="ay">Lets Gooooo!!!</p>
+
+        <audio id="myAudio" controls autoplay>
+            <source src="club.mp4" type="audio/mp4">
+        </audio>
+
+        <img src="party.gif" alt="">
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('myAudio');
+            audio.style.display = 'block'; // Ensure the audio is visible
+            audio.play().catch(function(error) {
+                console.log('Auto-play was prevented:', error);
+            });
+        });
+    </script>
+</body>
+</html>
