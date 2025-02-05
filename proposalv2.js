@@ -152,3 +152,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var noButtons = document.querySelectorAll('.group1 button');
+    var audio = document.getElementById('myAudio');
+    var clickCount = 0;
+
+    noButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            clickCount++;
+            if (clickCount === 1) {
+                audio.style.display = 'block';
+                audio.play().catch(function(error) {
+                    console.log('Auto-play was prevented:', error);
+                });
+            }
+        });
+    });
+});
